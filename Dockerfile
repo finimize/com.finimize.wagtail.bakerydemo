@@ -15,7 +15,7 @@ RUN set -ex \
         zlib1g \
     " \
     && seq 1 8 | xargs -I{} mkdir -p /usr/share/man/man{} \
-    && apt-get update && apt-get install -y --no-install-recommends $RUN_DEPS \
+    && apt-get update --allow-insecure-repositories && apt-get install -y --no-install-recommends $RUN_DEPS \
     && rm -rf /var/lib/apt/lists/*
 
 ADD requirements/ /requirements/
@@ -46,7 +46,7 @@ ENV PORT 8000
 EXPOSE 8000
 
 # Add custom environment variables needed by Django or your settings file here:
-ENV DJANGO_SETTINGS_MODULE=bakerydemo.settings.production DJANGO_DEBUG=off
+ENV DJANGO_SETTINGS_MODULE=bakerydemo.settings.production
 
 # Call collectstatic with dummy environment variables:
 RUN DATABASE_URL=postgres://none REDIS_URL=none python manage.py collectstatic --noinput

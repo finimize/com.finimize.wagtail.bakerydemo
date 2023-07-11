@@ -52,7 +52,9 @@ INSTALLED_APPS = [
     "wagtail.search",
     "wagtail.admin",
     "wagtail.api.v2",
-    "wagtail.locales",
+    # "wagtail.locales",
+    "wagtail_localize",
+    "wagtail_localize.locales",
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
     "wagtail.contrib.routable_page",
@@ -200,6 +202,10 @@ WAGTAIL_I18N_ENABLED = True
 WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
     ("en", "English"),
     ("de", "Deutsch"),
+    ("fr", "French"),
+    ("es", "Spanish"),
+    ("uk", "Ukrainian"),
+    ("ru", "Russian"),
     ("ar", "العربيّة"),
 ]
 
