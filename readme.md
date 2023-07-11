@@ -60,7 +60,7 @@ Go to `/admin/` and login with `admin / changeme`.
 Once you've installed the necessary dependencies run the following commands:
 
 ```bash
-git clone https://github.com/wagtail/bakerydemo.git
+git clone https://github.com/finimize/com.finimize.wagtail.bakerydemo.git
 cd bakerydemo
 vagrant up
 vagrant ssh
@@ -87,7 +87,7 @@ Use `Ctrl+c` to stop the local server. To stop the Vagrant environment, run `exi
 Run the following commands:
 
 ```bash
-git clone https://github.com/wagtail/bakerydemo.git
+git clone https://github.com/finimize/com.finimize.wagtail.bakerydemo.git
 cd bakerydemo
 docker compose up --build -d
 ```
@@ -147,7 +147,7 @@ Confirm that this is showing a compatible version of Python 3.x. If not, and you
 Now we're ready to set up the bakery demo project itself:
 
     cd ~/dev [or your preferred dev directory]
-    git clone https://github.com/wagtail/bakerydemo.git
+    git clone https://github.com/finimize/com.finimize.wagtail.bakerydemo.git
     cd bakerydemo
     pip install -r requirements/development.txt
 
